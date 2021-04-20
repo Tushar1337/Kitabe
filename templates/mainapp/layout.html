@@ -94,6 +94,14 @@
                                 <i class="nav-icon-s fa fa-user fa-2x" aria-hidden="true"></i><br>Signup
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="nav-icon-s fa fa-sun-o fa-2x" aria-hidden="true"></i><br>
+                                <div class="switch">Dark mode:              
+                                <span class="inner-switch">OFF</span>
+                                </div>
+                            </a>
+                        </li>
                         {% endif %}
                     </ul>
                 </div>
@@ -152,6 +160,7 @@
 	<a href='#top'>
 	<button  id="topBtn" title="Go to top"><i class="fa fa-angle-up"></i></button></a>
     <!-- End boostrap modal -->
+
     {% block main %}
     {% endblock main %}
 
@@ -375,6 +384,15 @@
         document.getElementById("topBtn").style.display = "none";
     }
      });  
+     $( ".inner-switch" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark" )) {
+      $( "body" ).removeClass( "dark" );
+      $( ".inner-switch" ).text( "OFF" );
+    } else {
+      $( "body" ).addClass( "dark" );
+      $( ".inner-switch" ).text( "ON" );
+    }
+});
     </script>
     <!-- End Search Bar Script -->
     {% block script %}

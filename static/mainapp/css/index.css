@@ -375,3 +375,9 @@ ol.carousel-indicators li.active {
     margin-right: -9%;
   }
 }
+.dark,
+.dark * {
+    background-color: rgb(34, 34, 34);
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
